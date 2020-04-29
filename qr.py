@@ -11,9 +11,9 @@ import qrcode
 
 
 def generate_qr_code(data):
-    file = './images/qr_codes/qr-' + str(time.time()) + '.png'
+##    file = 'images/qr_codes/qr-' + str(time.time()) + '.png'
     img = qrcode.make(data)
-    img.save(file)
+##    img.save(file)
     return file
 
 def read_qr_code():
