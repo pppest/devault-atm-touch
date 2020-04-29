@@ -1,0 +1,240 @@
+#:import Clock kivy.clock.Clock
+#:import c config
+#:import delight delight
+#:import Factory kivy.factory.Factory
+#:import time time
+
+
+<AtmLabel@Label>:
+    font_size: 19
+    font_name: 'font/Montserrat-Light.otf'
+<AtmButton@Button>:
+    font_size: 19
+    font_name: 'font/Montserrat-Light.otf'
+
+<MyPopup@Popup>:
+    title: ''
+    size: 100 , 100
+    size_hint: None , None
+    separator_height: 0
+    on_open: app.get_qr(); root.dismiss()
+    background: 'images/transparent.png'
+    AtmLabel:
+        id: popuplbl
+        text: app.popup_text
+        font_size: 33
+        font_name: 'font/Montserrat-Light.otf'
+        pos_hint: {'x': 0.84, 'y': 0.94}
+        color: 0,1,0,1
+
+# ATM screens
+<Atm>:
+    StartScreen:
+        name: 'start'
+        on_enter: app.atm_balance = delight.get_balance(c.ATM_WALLET)
+        AtmButton:
+            on_press: app.root.current = 'buy'
+            size_hint: 1, 1
+            Image:
+                id: bgimage
+                source: app.start_image
+                y: 0
+                x: 0
+                size: 800, 480
+                allow_stretch: False
+                keep_ratio: True
+        # Camera:
+        #     id: camera
+        #     play: True
+
+# Buy screen
+    BuyScreen:
+        name: 'buy'
+        id: buy
+        on_pre_enter: c.COINS = 0.0; c.COINS_INSERTED = []; app.dvt_bought=0.0; app.client_address = 'No address! Scan your wallet QR!'; app.client_qr = 'images/transparent.png'; tx.text = ''; app.start_time = app.rl_time;
+        canvas.before:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: 'images/Dbuyscreen1.png'
+            # Color:
+            #     rgb: 1, 1, 1
+# FLoat Layout
+        FloatLayout:
+            id: buylayout
+            size: 800, 480
+# Time
+            AtmLabel:
+                id: timelabel
+                size_hint_y: 0.05
+                size_hint_x: 0.05
+                pos_hint: {'x': 0.84, 'y': 0.94}
+                color: 0,1,0,1
+                font_size: 15
+                text: app.time
+# logo / graphics
+            Image:
+                id: logo
+                size: 800, 99
+                pos_hint: {'x': 0, 'y': 0.33}
+                source: 'images/buydevaultGR.png'
+                allow_stretch: False
+                keep_ratio: True
+# price label
+            AtmLabel:
+                id: price
+                size_hint_y: 0.1
+                size_hint_x: 0.1
+                pos_hint: {'x': 0.3, 'y': 0.63}
+                font_size: 15
+                color: 0,1,0,1
+                text: 'Price: ' + str(c.PRICE_WITH_FEE) + ' ' + str.upper(c.FIAT_PAIR) + ' / DVT'
+# atm balance label
+            AtmLabel:
+                id: atmbalance
+                size_hint_y: 0.1
+                size_hint_x: 0.1
+                pos_hint: {'x': 0.6, 'y': 0.63}
+                font_name: 'font/Montserrat-Light.otf'
+                font_size: 17
+                color: 0,1,0,1
+                text: str(int(app.atm_balance - app.dvt_bought)) + ' DVT Available'
+
+# COINS DVT
+            AtmLabel:
+                id: coins
+                size_hint_y: 0.2
+                size_hint_x: 0.2
+                pos_hint: {'x': 0.4, 'y': 0.48} ## 44
+                font_size: 19
+                color: 0,1,0,1
+                text: 'Coins inserted: ' + app.coins_str + ' ' + c.FIAT_PAIR.upper() + ', equal to ' + app.dvt_bought_str + ' DVT '
+# WALLET ADDRESS LABEL
+            AtmLabel:
+                size_hint_y: 0.2
+                size_hint_x: 0.2
+                pos_hint: {'x': 0.4, 'y': 0.4}
+                font_size: 19
+                color: 0,1,0,1
+                text: 'Recieving address:'
+            AtmLabel:
+                id: address
+                size_hint_y: 0.2
+                size_hint_x: 0.2
+                pos_hint: {'x': 0.4, 'y': 0.34}
+                font_size: 19
+                color: 0,1,0,1
+                text: app.client_address
+# WALLET QR IMG
+            Image:
+                id: walletqr
+                source: app.client_qr
+                size: 80, 80
+                size_hint_y: None
+                size_hint_x: None
+                pos_hint: {'x': 0.45, 'y': 0.20}
+                allow_stretch: True
+                keep_ratio: True
+                color: 1,1,1,1
+
+# Scan Wallet QR Button
+            AtmButton:
+                id: qr
+                size_hint_y: 0.11
+                size_hint_x: 0.2495
+                pos_hint: {'x': 0.055, 'y': 0.068}
+                background_normal: ''
+                background_color: 0.1,0.6,0.1,0
+                on_press: app.popup_text = 'Hold you QR in front of the camera!'; Factory.MyPopup().open();
+# CHECKOUT BUTTON
+            AtmButton:
+                id: chkout
+                size_hint_y: 0.1
+                size_hint_x: 0.25
+                pos_hint: {'x': 0.681, 'y': 0.068}
+                background_normal: ''
+                background_color: 0.1,0.6,0.1,0
+                on_press:  app.has_address()
+                on_release: app.root.current = 'checkout'
+# PROGRESS BAR TAKES YOU BACK TO START IF TIME RUNS OUT AND NO COIN IS INSERTED
+            ProgressBar:
+                id: progbarbuy
+                size_hint_y: 0.01
+                size_hint_x: 1
+                pos_hint: {'x': 0.0, 'y': 0.0}
+                min: 0
+                max: c.TIMEOUT
+                value: app.rl_time - app.start_time
+
+# CHECKOUT SCREEN
+    CheckoutScreen:
+        name: 'checkout'
+        on_pre_enter:
+        on_enter: tx.text = str(delight.deposit(app.client_address, int(app.dvt_bought), c.ATM_WALLET)); thx.text = 'Thanks for buying DeVault!'; app.start_time = app.rl_time; Clock.schedule_once(self.goto_start_screen, c.TIMEOUT);
+        on_leave: c.COINS = 0.0; c.COINS_INSERTED = []; app.dvt_bought=0.0; app.client_address = 'No address! Scan your wallet QR!'; app.client_qr = 'images/transparent.png'; tx.text = '';
+        canvas.before:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: 'images/Dbuyscreen2.png'
+            Color:
+                rgb: 1, 1, 1
+        FloatLayout:
+            id: txinfo
+            size: 800, 480
+# time
+            AtmLabel:
+                id: timelabel2
+                size_hint_y: 0.05
+                size_hint_x: 0.05
+                pos_hint: {'x': 0.84, 'y': 0.94}
+                font_size: 15
+                color: 0,1,0,1
+                text: app.time
+
+# logo / graphics
+            Image:
+                id: logo
+                size: 800, 99
+                pos_hint: {'x': 0, 'y': 0.33}
+                source: 'images/buydevaultGR.png'
+                allow_stretch: False
+                keep_ratio: True
+
+# THANKS TEXT
+            AtmLabel:
+                id: thx
+                size_hint_y: 0.2
+                size_hint_x: 0.2
+                pos_hint: {'x': 0.4, 'y': 0.58} ## 44
+                font_size: 19
+                color: 0,1,0,1
+                text: 'Depositing ' + app.dvt_bought_str + ' DVT  to ' + app.client_address
+# tx id
+            AtmLabel:
+                id: tx
+                size_hint_y: 0.2
+                size_hint_x: 0.2
+                pos_hint: {'x': 0.4, 'y': 0.48} ## 44
+                font_size: 19
+                color: 0,1,0,1
+                text: 'TX ID'
+# QR IMAGE
+            Image:
+                id: txqr
+                source: app.gen_qr('https://exploredvt.com/tx/' + tx.text)
+                size: 150, 150
+                size_hint_y: None
+                size_hint_x: None
+                allow_stretch: True
+                pos_hint: {'x': 0.4, 'y': 0.18}
+                keep_ratio: True
+
+            ProgressBar:
+                id: progbar2
+                size_hint_y: 0.01
+                size_hint_x: 1
+                pos_hint: {'x': 0.0, 'y': 0.00}
+                min:0
+                max: c.TIMEOUT
+                value: app.rl_time - app.start_time
