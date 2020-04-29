@@ -1,7 +1,4 @@
 
-## import kivy
-## kivy.require('1.1.11')
-
 from kivy.app import App
 from kivy.clock import Clock
 from kivy.lang import Builder
