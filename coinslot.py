@@ -5,7 +5,6 @@ import time
 ## Calculates which coin is inserted. REALLY need to make sure
 ## that user recieves a warning when reaching max buy
 def calc_coins(atm_balance):
-    max_buy = float(atm_balance) - c.TX_FEE #
     price_with_fee = c.PRICE_WITH_FEE
     dvt_bought = round(sum(c.COINS_INSERTED) / price_with_fee, 3)
 
