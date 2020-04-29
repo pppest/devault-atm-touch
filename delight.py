@@ -5,7 +5,7 @@
 
 import os
 import json
-import config
+import config as c
 
 def start_daemon():
     print('Starting daemon.')
