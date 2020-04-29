@@ -17,7 +17,7 @@
     size: 100 , 100
     size_hint: None , None
     separator_height: 0
-    on_open: app.get_qr(); root.dismiss()
+    on_open: app.read_qr(); root.dismiss()
     background: 'images/transparent.png'
     AtmLabel:
         id: popuplbl
@@ -31,7 +31,6 @@
 <Atm>:
     StartScreen:
         name: 'start'
-        on_enter: app.atm_balance = delight.get_balance(c.ATM_WALLET)
         AtmButton:
             on_press: app.root.current = 'buy'
             size_hint: 1, 1
@@ -171,7 +170,7 @@
         name: 'checkout'
         on_pre_enter:
         on_enter: tx.text = str(delight.deposit(app.client_address, int(app.dvt_bought), c.ATM_WALLET)); thx.text = 'Thanks for buying DeVault!'; app.start_time = app.rl_time; Clock.schedule_once(self.goto_start_screen, c.TIMEOUT);
-        on_leave: c.COINS = 0.0; c.COINS_INSERTED = []; app.dvt_bought=0.0; app.client_address = 'No address! Scan your wallet QR!'; app.client_qr = 'images/transparent.png'; tx.text = '';
+        on_leave: c.COINS = 0.0; c.COINS_INSERTED = []; app.dvt_bought=0.0; app.client_address = 'No address! Scan your wallet QR!'; app.client_qr = 'images/transparent.png'; tx.text = ''; app.atm_balance = delight.get_balance(c.ATM_WALLET)
         canvas.before:
             Rectangle:
                 pos: self.pos

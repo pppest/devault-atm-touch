@@ -1,7 +1,6 @@
 
-
-import kivy
-kivy.require('1.1.11')
+## import kivy
+## kivy.require('1.1.11')
 
 from kivy.app import App
 from kivy.clock import Clock
@@ -48,7 +47,9 @@ class CheckoutScreen(BuyScreen):
 class Atm(ScreenManager):
     pass
 
+
 ## The App class mainly updates properties of the kivy ATM
+## the widgets are defined in atm.kv
 class AtmApp(App):
     start_time = 0.0
     time = StringProperty()
