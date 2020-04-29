@@ -38,25 +38,12 @@ def read_qr_code():
                 # our output image we need to convert it to a string first
                 barcode_data = barcode.data.decode("utf-8")
                 barcode_type = barcode.type
-                # draw the barcode data and barcode type on the image
-#                text = "{} ({})".format(barcode_data, barcode_type)
-#                cv2.putText(frame, text, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX,
-#                             0.5, (0, 0, 255), 2)
-
                 # print the barcode type and data to the terminal
-                print("Found {} barcode: {}".format(barcode_type,
-                barcode_data))
-                #make sure its a devault wallet
-                # if "devault:" in barcode_data:
-                #     print("devault:" in barcode_data)
-                #     break
+                print("Found {} barcode: {}".format(barcode_type, barcode_data))
+                ## Make sure its a devault wallet
                 if "devault:" not in barcode_data:
-                    not_dvt = "NOT a DeVault wallet!!!"
-                    cv2.putText(frame, not_dvt, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX,
-                                0.5, (0, 0, 255), 2)
+                    print("NOT a DeVault wallet!!!")
                     barcodes = []
-                    print(not_dvt)
-#            cv2.imshow('frame', frame) ## show video frame needs X
             if barcodes != []:
                     break
         else:
