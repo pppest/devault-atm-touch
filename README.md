@@ -1,7 +1,7 @@
 #A touchscreen ATM for DeVault
 
 **tl;dr**
-kivy framework based touchscreen DeVault crypto ATM :atm: for the raspberry pi with a
+kivy framework based touchscreen DeVault crypto ATM for the raspberry pi with a
 coin acceptor.
 
 
@@ -15,7 +15,7 @@ Here is an image of the DeVault piñata ATM.
 ![DeVault ATM](https://github.com/pppest/devault-atm-touch/blob/master/images/devault-atm-touch-pinnata.jpg)
 
 
-Big shout-out to @21isenough, the Python and Kivy community for sharing so much great information!!!
+Big shout-out to @21isenough , the Python and Kivy community for sharing so much great information!!!
 And to the DeVault devs @jonspock and @proteanx for helping me learn.  
 :beers:
 
