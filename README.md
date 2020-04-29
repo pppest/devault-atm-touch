@@ -10,8 +10,9 @@ on basic python and started. I didn't have a Raspberry Pi so I got a
 usb converter and made a console based [first version](https://github.com/pppest/devault-atm).  
 
 This is the first version of the kivy based ATM. I have plans to extend its functionality and to make different versions.
-Here is an image of the DeVault piñata ATM.
-![GitHub Logo](/images/devault-atm-touch-pinnata)
+Here is an image of the DeVault piñata ATM.  
+
+![DeVault ATM](https://github.com/pppest/devault-atm-touch/blob/master/images/devault-atm-touch-pinnata.jpg)
 
 
 Big shout-out to @21isenough, the Python and Kivy community for sharing so much great information!!!
