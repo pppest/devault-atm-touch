@@ -3,7 +3,7 @@
 **tl;dr**
 kivy framework based touchscreen DeVault crypto ATM for the raspberry pi with a
 coin acceptor.
-https://kivy.org/doc/stable/installation/installation-linux.html
+
 **About**
 
 I work for the DeVault community and saw @21isenough 's [LightningATM prototyope](https://github.com/21isenough/LightningATM) on reddit, took a look at the code and got inspired  to learn python. Then I watched some youtube tutorials, I can recommend @CoreyMSchafer s [channel](https://www.youtube.com/channel/UCCezIgC97PvUuR4_gbFUs5g),
