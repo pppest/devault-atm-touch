@@ -30,7 +30,10 @@ Once you have the hardware setup then clone the code and then download the [DeLi
 Then install the requirements and run app.py
 
 Note:  
-I left the usb.py in case someone want to use it with a convert instead of gpios
+I left the usb.py in case someone want to use it with a convert instead of gpios  
+
+
+     
 **Links**  
 Website: http://www.devault.cc/  
 Forum: https://devaultchat.cc/  
