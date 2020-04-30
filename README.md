@@ -29,7 +29,7 @@ I left the usb.py in case someone want to use it with a converter instead of gpi
 
 
 **About**  
-I work for the DeVault community and saw @21isenough 's [LightningATM prototyope](https://github.com/21isenough/LightningATM) on reddit, took a look at the code and got inspired  to learn python. Then I watched some youtube tutorials, I can recommend @CoreyMSchafer s [channel](https://www.youtube.com/channel/UCCezIgC97PvUuR4_gbFUs5g),
+I work for the DeVault community and saw @21isenough 's [LightningATM prototype](https://github.com/21isenough/LightningATM) on reddit, took a look at the code and got inspired  to learn python. Then I watched some youtube tutorials, I can recommend @CoreyMSchafer s [channel](https://www.youtube.com/channel/UCCezIgC97PvUuR4_gbFUs5g),
 on basic python and started. I didn't have a Raspberry Pi so I got a
 usb converter and made a console based [first version](https://github.com/pppest/devault-atm).  
 
