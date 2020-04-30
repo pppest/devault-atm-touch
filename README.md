@@ -13,7 +13,7 @@ This is the first version of the kivy based ATM, but I have plans to extend its 
 Here is an image of the DeVault piñata ATM that I am working on:  
 
 ![DeVault ATM](https://github.com/pppest/devault-atm-touch/blob/master/images/devault-atm-touch-pinnata.jpg)   ![transactiongif](https://github.com/pppest/devault-atm-touch/blob/master/images/transaction.gif)
-
+![transactiongif](https://github.com/pppest/devault-atm-touch/blob/master/images/atm.gif)
 
 Big shout-out to @21isenough , the Python and Kivy community for sharing so much great information!!!  
 And to the DeVault devs @jonspock and @proteanx for helping me learn.  
