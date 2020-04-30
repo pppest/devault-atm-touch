@@ -18,7 +18,7 @@ Here is an image of the DeVault piñata ATM that I am working on:
 Big shout-out to @21isenough , the Python and Kivy community for sharing so much great information!!!  
 And to the DeVault devs @jonspock and @proteanx for helping me learn.  
 :beers:
-(
+
 If you have any questions then come find me in the DeVault [discord](https://discordapp.com/invite/JnRZ7BB) or [forum](https://devaultchat.cc/) or on [twitter](https://twitter.com/pestdesmadre).
 
 **How to use**  
