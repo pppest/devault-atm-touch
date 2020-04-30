@@ -12,7 +12,7 @@ usb converter and made a console based [first version](https://github.com/pppest
 This is the first version of the kivy based ATM, but I have plans to extend its functionality and to make different versions.
 Here is an image of the DeVault piñata ATM that I am working on:  
 
-![DeVault ATM](https://github.com/pppest/devault-atm-touch/blob/master/images/devault-atm-touch-pinnata.jpg)
+![DeVault ATM](https://github.com/pppest/devault-atm-touch/blob/master/images/devault-atm-touch-pinnata.jpg)![transactiongif](transaction.gif)
 
 
 Big shout-out to @21isenough , the Python and Kivy community for sharing so much great information!!!  
