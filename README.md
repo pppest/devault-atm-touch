@@ -10,8 +10,8 @@ I work for the DeVault community and saw @21isenough 's [LightningATM prototyope
 on basic python and started. I didn't have a Raspberry Pi so I got a
 usb converter and made a console based [first version](https://github.com/pppest/devault-atm).  
 
-This is the first version of the kivy based ATM. I have plans to extend its functionality and to make different versions.
-Here is an image of the DeVault piñata ATM that I am wokring on:  
+This is the first version of the kivy based ATM, but I have plans to extend its functionality and to make different versions.
+Here is an image of the DeVault piñata ATM that I am working on:  
 
 ![DeVault ATM](https://github.com/pppest/devault-atm-touch/blob/master/images/devault-atm-touch-pinnata.jpg)
 
@@ -23,10 +23,9 @@ And to the DeVault devs @jonspock and @proteanx for helping me learn.
 
 **How to use**  
 Take a look at [@21isenough](https://github.com/21isenough/LightningATM)s or [@talenpierre](https://github.com/talentpierre/KivyLightningATM_Repo/tree/master/LightningATM_Kivy_Separate)s github if you need to learn how to build the actual thing. They have great documentation.
-Once you have the hardware setup then clone the code and then download the [DeLight](https://github.com/devaultcrypto/DeLight/releases) client to the atm dir and name the client dir DeLight:
+Once you have the hardware setup then clone the code and then download the [DeLight](https://github.com/devaultcrypto/DeLight/releases) client to the atm dir and name the client dir *DeLight*:
 > devault-atm-touch/DeLight/delight
 
-_Note to self: add check for client to code!_
 
 Then install the requirements and run app.py
 
