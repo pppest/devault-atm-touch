@@ -1,4 +1,4 @@
-#A touchscreen ATM for DeVault
+# A touchscreen ATM for DeVault
 
 **tl;dr**
 kivy framework based touchscreen DeVault crypto ATM for the raspberry pi with a
