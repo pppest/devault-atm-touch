@@ -10,6 +10,7 @@ from kivy.properties import StringProperty, NumericProperty
 from kivy.uix.screenmanager import ScreenManager, Screen, NoTransition
 
 import time
+import os
 
 # ATM modules
 import config as c
