@@ -32,6 +32,4 @@ Then install the requirements and run app.py
 **Links**  
 Website: http://www.devault.cc/  
 Forum: https://devaultchat.cc/  
-DeVault ID: https://www.devaultid.com/  
-DeVault Online: https://devault.online  
 Github: https://github.com/devaultcrypto  
