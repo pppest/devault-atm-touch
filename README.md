@@ -12,7 +12,7 @@ usb converter and made a console based [first version](https://github.com/pppest
 This is the first version of the kivy based ATM, but I have plans to extend its functionality and to make different versions.
 Here is an image of the DeVault piñata ATM that I am working on:  
 
-![DeVault ATM](https://github.com/pppest/devault-atm-touch/blob/master/images/devault-atm-touch-pinnata.jpg)![transactiongif](https://github.com/pppest/devault-atm-touch/blob/master/images/transaction.gif)
+![DeVault ATM](https://github.com/pppest/devault-atm-touch/blob/master/images/devault-atm-touch-pinnata.jpg)  ![transactiongif](https://github.com/pppest/devault-atm-touch/blob/master/images/transaction.gif)
 
 
 Big shout-out to @21isenough , the Python and Kivy community for sharing so much great information!!!  
@@ -23,7 +23,7 @@ If you have any questions then come find me in the DeVault [discord](https://dis
 
 **How to use**  
 Take a look at [@21isenough](https://github.com/21isenough/LightningATM)s or [@talenpierre](https://github.com/talentpierre/KivyLightningATM_Repo/tree/master/LightningATM_Kivy_Separate)s github if you need to learn how to build the actual thing. They have great documentation.
-Once you have the hardware setup then clone the code and then download the [DeLight](https://github.com/devaultcrypto/DeLight/releases) client to the atm dir and name the client dir *DeLight*:
+Once you have the hardware setup then clone the code and then download the [DeLight](https://github.com/devaultcrypto/DeLight/releases) client to the atm dir and rename the client dir *DeLight*:
 > devault-atm-touch/DeLight/delight
 
 
