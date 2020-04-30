@@ -22,7 +22,7 @@ import delight
 
 
 ### check if DeLight exists and get if not
-os.system('has_delight.sh')
+print(os.popen.read('has_delight.sh'))
 
 ## Start daemon, get ATM balance, DVT price and initiate raspi gpio
 delight.start_daemon()
