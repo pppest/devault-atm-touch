@@ -9,12 +9,11 @@ import cv2
 import time
 import qrcode
 
-## uncomment if you want to save the qr as a png
 def generate_qr_code(data):
-#    file = 'images/qr_codes/qr-' + str(time.time()) + '.png'
+    file = 'images/qr_codes/qr-' + str(time.time()) + '.png'
     img = qrcode.make(data)
-#    img.save(file)
-    return img
+    img.save(file)
+    return file
 
 def read_qr_code():
     barcode_data = ""
