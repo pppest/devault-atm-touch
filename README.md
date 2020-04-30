@@ -24,11 +24,9 @@ If you have any questions then come find me in the DeVault [discord](https://dis
 
 **How to use**  
 Take a look at [@21isenough](https://github.com/21isenough/LightningATM)s or [@talenpierre](https://github.com/talentpierre/KivyLightningATM_Repo/tree/master/LightningATM_Kivy_Separate)s github if you need to learn how to build the actual thing. They have great documentation.
-Once you have the hardware setup then clone the code and then download the [DeLight](https://github.com/devaultcrypto/DeLight/releases) client to the atm dir and rename the client dir *DeLight*:
-> devault-atm-touch/DeLight/delight
 
-
-Then install the requirements and run app.py
+To use my code just clone/download it, install the requirements and run the app.   
+The app checks for the DeLight client and downloads if not found.
 
 Note:  
 I left the usb.py in case someone want to use it with a converter instead of gpios  

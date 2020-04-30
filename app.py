@@ -21,7 +21,7 @@ import coinslot
 import delight
 
 
-### check if DeLight exists and get if not
+### check if DeLight exists and downloads if not
 print(os.popen('sh ./has_delight.sh').read())
 
 ## Start daemon, get ATM balance, DVT price and initiate raspi gpio
