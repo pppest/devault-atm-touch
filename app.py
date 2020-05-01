@@ -62,6 +62,7 @@ class AtmApp(App):
     client_address = StringProperty('No address! Scan your wallet QR!')
     client_qr = StringProperty('images/transparent.png')
     popup_text = StringProperty()
+    counter = 0
 
     def is_dvt_address(self, address, *args):
         return 'devault:' in address
@@ -89,8 +90,8 @@ class AtmApp(App):
         self.dvt_bought = c.COINS/c.PRICE_WITH_FEE
         self.dvt_bought_str = str(round(c.COINS/c.PRICE_WITH_FEE, 3))
 
-        self.root.export_to_png('captures/' + str(time.time()) + '.png')
-
+        self.root.export_to_png('captures/' + self.counter + '.png')
+        counter += 1
 
         # deposit if timeout and dvt bought and wallet scanned
         if self.root.current == 'buy':
