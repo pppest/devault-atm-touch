@@ -9,4 +9,5 @@ else
  echo 'sdsd'
  tar -xvf DeLight-4.0.12.tar.gz
  mv DeLight-4.0.12 DeLight
+ rm DeLight-4.0.12.tar.gz
 fi
