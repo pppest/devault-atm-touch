@@ -1,12 +1,12 @@
 #!/bin/bash
 
-if [[ -d ./DeLight ]]
+if [[ -d DeLight ]]
 then
-    echo "/etc exists on your filesystem."
+    echo "Delight exists on your filesystem."
 
 else
-  wget https://github.com/devaultcrypto/DeLight/releases/download/v4.0.12/DeLight-4.0.12.tar.gz
+ wget https://github.com/devaultcrypto/DeLight/releases/download/v4.0.12/DeLight-4.0.12.tar.gz
+ echo 'sdsd'
+ tar -xvf DeLight-4.0.12.tar.gz
+ mv DeLight-4.0.12 DeLight
 fi
-
-tar -xvf DeLight-4.0.12.tar.gz
-mv DeLight-4.0.12 DeLight
