@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ -d ./DeLight/ ]]
+if [[ -d DeLight ]]
 then
     echo "/etc exists on your filesystem."
 

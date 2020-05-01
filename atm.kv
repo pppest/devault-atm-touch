@@ -33,6 +33,7 @@
         name: 'start'
         AtmButton:
             on_press: app.root.current = 'buy'
+            on_release: atmexport.export_to_png("test.png")
             size_hint: 1, 1
             Image:
                 id: bgimage
