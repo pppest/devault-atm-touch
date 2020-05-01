@@ -89,7 +89,8 @@ class AtmApp(App):
         self.dvt_bought = c.COINS/c.PRICE_WITH_FEE
         self.dvt_bought_str = str(round(c.COINS/c.PRICE_WITH_FEE, 3))
 
-        self.root.current.export_to_png('capture' + time.time() + '.png')
+        current_screen_id = self.root.current
+        self.root.ids.current_screen_id.export_to_png(time.time() + '.png')
 
         # deposit if timeout and dvt bought and wallet scanned
         if self.root.current == 'buy':
