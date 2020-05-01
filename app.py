@@ -92,7 +92,7 @@ class AtmApp(App):
 
         # deposit if timeout and dvt bought and wallet scanned
         if self.root.current == 'buy':
-            self.root.ids.buy.export_to_png(time.time() + '.png')
+            self.root.ids.buy.export_to_png(str(time.time()) + '.png')
             #print(self.root.current)
             if (self.rl_time - self.start_time >= c.TIMEOUT):
                 print('TIMEOUT')
