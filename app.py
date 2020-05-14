@@ -96,7 +96,13 @@ class AtmApp(App):
         if self.root.current == 'buy':
             # show warning if atm_balance low
             if  True: ##self.atm_balance <= 2 * self.value_of_biggest_coin:
-                popup = Popup(title='', content=Label(text='WARNING! ATM balance low! \n NO RETURNS'), auto_dismiss=False)
+                popup = Popup(title='', size =  (100 , 100) \
+                                size_hint =(None , None),separator_height = 0, \
+                                content=Label(text='WARNING! ATM \
+                                balance low! \n NO RETURNS', font_size = 33, \
+                                font_name = 'font/Montserrat-Light.otf', \
+                                pos_hint = {'x': 0.84, 'y': 0.94}, \
+                                        color: 0,1,0,1 ), auto_dismiss=False)
                 popup.open()
 
             if (self.rl_time - self.start_time >= c.TIMEOUT):
