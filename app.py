@@ -45,6 +45,11 @@ class CheckoutScreen(BuyScreen):
 
 
 class Atm(ScreenManager):
+        Warning = Popup(title='Test popup', content=Label(text='Hello world'),
+                  auto_dismiss=False)
+
+        Warning.open()
+
     pass
 
 
@@ -65,10 +70,6 @@ class AtmApp(App):
     popup_text = StringProperty()
     value_of_biggest_coin = c.BIGGEST_COIN * c.PRICE_WITH_FEE
 
-    Warning = Popup(title='Test popup', content=Label(text='Hello world'),
-              auto_dismiss=False)
-
-    Warning.open()
 
 
 
