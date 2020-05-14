@@ -68,7 +68,7 @@ class AtmApp(App):
     Warning = Popup(title='Test popup', content=Label(text='Hello world'),
               auto_dismiss=False)
 
-    popup.open()
+    Warning.open()
 
 
 
