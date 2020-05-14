@@ -102,7 +102,7 @@ class AtmApp(App):
                                 content = Button(text='WARNING! \n ATM BALANCE LOW \n NO RETURNS', \
                                 font_size = 33, \
                                 font_name = 'font/Montserrat-Light.otf', \
-                                pos_hint = {'x': 0.84, 'y': 0.94},color = (0,1,0,1), on_press = popup.dismiss()))
+                                pos_hint = {'x': 0.84, 'y': 0.94},color = (0,1,0,1), on_press = root.dismiss()))
                 popup.open()
                 time.sleep(5)
                 popup.dismiss()
