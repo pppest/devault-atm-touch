@@ -99,10 +99,13 @@ class AtmApp(App):
                 popup = Popup(title='', size =  (100 , 100), \
                                 size_hint =(None , None),
                                 separator_height = 0, background = 'images/transparent.png', \
-                                content = Label(text='WARNING! ATM BALANCE LOW \n NO RETURNS', font_size = 33, \
-                                    font_name = 'font/Montserrat-Light.otf', \
-                                    pos_hint = {'x': 0.84, 'y': 0.94},color = (0,1,0,1)))
+                                content = Button(text='WARNING! \n ATM BALANCE LOW \n NO RETURNS', \
+                                font_size = 33, \
+                                font_name = 'font/Montserrat-Light.otf', \
+                                pos_hint = {'x': 0.84, 'y': 0.94},color = (0,1,0,1), on_press = popup.dismiss()))
                 popup.open()
+                time.sleep(5)
+                popup.dismiss()
 
             if (self.rl_time - self.start_time >= c.TIMEOUT):
                 print('TIMEOUT')
