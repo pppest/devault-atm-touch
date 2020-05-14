@@ -7,8 +7,7 @@ from kivy.uix.label import Label
 from kivy.uix.progressbar import ProgressBar
 from kivy.properties import StringProperty, NumericProperty
 from kivy.uix.screenmanager import ScreenManager, Screen, NoTransition
-from kivy.factory.Factory import Factory
-
+from kivy.factory import Factory
 import time
 import os
 
