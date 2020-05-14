@@ -95,7 +95,7 @@ class AtmApp(App):
             if atm_balance <= 2 * value_of_biggest_coin:
                 self.app.popup_text = 'WARNING! \n ATM balance low and ATM doesnt give back'
                 self.root.Factory.MyPopup().open()
-            
+
             if (self.rl_time - self.start_time >= c.TIMEOUT):
                 print('TIMEOUT')
                 if (self.dvt_bought > 0):
