@@ -8,6 +8,7 @@ from kivy.uix.progressbar import ProgressBar
 from kivy.properties import StringProperty, NumericProperty
 from kivy.uix.screenmanager import ScreenManager, Screen, NoTransition
 from kivy.uix.popup import Popup
+
 import time
 import os
 
@@ -95,8 +96,8 @@ class AtmApp(App):
         if self.root.current == 'buy':
             # show warning if atm_balance low
             if True: #  self.atm_balance < 1 * self.value_of_biggest_coin
-                self.popup_text = 'WARNING! \n ATM balance low! and ATM doesnt give back'
-                self.root.Factory.Warning().open()
+                popup = Popup(title='Test popup', content=Label(text='Hello world'), auto_dismiss=False)
+                popup.open()
 
             if (self.rl_time - self.start_time >= c.TIMEOUT):
                 print('TIMEOUT')
