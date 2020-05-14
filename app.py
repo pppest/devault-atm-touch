@@ -7,7 +7,7 @@ from kivy.uix.label import Label
 from kivy.uix.progressbar import ProgressBar
 from kivy.properties import StringProperty, NumericProperty
 from kivy.uix.screenmanager import ScreenManager, Screen, NoTransition
-from kivy.factory import Factory
+from kivy.uix.popup import Popup
 import time
 import os
 
@@ -48,6 +48,8 @@ class Atm(ScreenManager):
     pass
 
 
+
+
 ## The App class mainly updates properties of the kivy ATM
 ## the widgets are defined in atm.kv
 class AtmApp(App):
@@ -62,6 +64,14 @@ class AtmApp(App):
     client_qr = StringProperty('images/transparent.png')
     popup_text = StringProperty()
     value_of_biggest_coin = c.BIGGEST_COIN * c.PRICE_WITH_FEE
+
+    Warning = Popup(title='Test popup', content=Label(text='Hello world'),
+              auto_dismiss=False)
+
+    popup.open()
+
+
+
 
     def is_dvt_address(self, address, *args):
         return 'devault:' in address
@@ -94,7 +104,7 @@ class AtmApp(App):
             # show warning if atm_balance low
             if True: #  self.atm_balance < 1 * self.value_of_biggest_coin
                 self.popup_text = 'WARNING! \n ATM balance low! and ATM doesnt give back'
-                self.root.Factory.MyPopup().open()
+                self.root.Warning().open()
 
             if (self.rl_time - self.start_time >= c.TIMEOUT):
                 print('TIMEOUT')
