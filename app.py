@@ -92,8 +92,8 @@ class AtmApp(App):
         # deposit if timeout and dvt bought and wallet scanned
         if self.root.current == 'buy':
             # show warning if atm_balance low
-            if self.atm_balance < 1 * self.value_of_biggest_coin:
-                self.app.popup_text = 'WARNING! \n ATM balance low and ATM doesnt give back'
+            if True: #  self.atm_balance < 1 * self.value_of_biggest_coin
+                self.app.popup_text = 'WARNING! \n ATM balance low! and ATM doesnt give back'
                 self.root.Factory.MyPopup().open()
 
             if (self.rl_time - self.start_time >= c.TIMEOUT):
