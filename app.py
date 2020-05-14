@@ -50,7 +50,7 @@ class Atm(ScreenManager):
 
         Warning.open()
 
-    pass
+        pass
 
 
 
