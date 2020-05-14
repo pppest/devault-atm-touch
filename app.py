@@ -96,7 +96,7 @@ class AtmApp(App):
             # show warning if atm_balance low
             if True: #  self.atm_balance < 1 * self.value_of_biggest_coin
                 self.popup_text = 'WARNING! \n ATM balance low! and ATM doesnt give back'
-                self.root.current.Factory.Warning().open()
+                self.root.Factory.Warning().open()
 
             if (self.rl_time - self.start_time >= c.TIMEOUT):
                 print('TIMEOUT')
