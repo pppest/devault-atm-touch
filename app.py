@@ -95,12 +95,11 @@ class AtmApp(App):
         # deposit if timeout and dvt bought and wallet scanned
         if self.root.current == 'buy':
             # show warning if atm_balance low
-            if  True: ##self.atm_balance <= 2 * self.value_of_biggest_coin:
+            if (self.rl_time - self.start_time >= (c.TIMEOUT/2)) : ##self.atm_balance <= 2 * self.value_of_biggest_coin:
                 popup = Popup(title='', size =  (100 , 100), \
                                 size_hint =(None , None),
                                 separator_height = 0, background = 'images/transparent.png', \
-                                content = Label(text='WARNING! ATM \
-                                    balance low! \n NO RETURNS', font_size = 33, \
+                                content = Label(text='WARNING! ATM BALANCE LOW \n NO RETURNS', font_size = 33, \
                                     font_name = 'font/Montserrat-Light.otf', \
                                     pos_hint = {'x': 0.84, 'y': 0.94},color = (0,1,0,1)))
                 popup.open()
