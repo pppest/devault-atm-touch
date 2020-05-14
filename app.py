@@ -45,12 +45,7 @@ class CheckoutScreen(BuyScreen):
 
 
 class Atm(ScreenManager):
-        Warning = Popup(title='Test popup', content=Label(text='Hello world'),
-                  auto_dismiss=False)
-
-        Warning.open()
-
-        pass
+    pass
 
 
 
@@ -69,10 +64,6 @@ class AtmApp(App):
     client_qr = StringProperty('images/transparent.png')
     popup_text = StringProperty()
     value_of_biggest_coin = c.BIGGEST_COIN * c.PRICE_WITH_FEE
-
-
-
-
 
     def is_dvt_address(self, address, *args):
         return 'devault:' in address
@@ -105,7 +96,7 @@ class AtmApp(App):
             # show warning if atm_balance low
             if True: #  self.atm_balance < 1 * self.value_of_biggest_coin
                 self.popup_text = 'WARNING! \n ATM balance low! and ATM doesnt give back'
-                self.root.Warning().open()
+                self.root.current.Warning().open()
 
             if (self.rl_time - self.start_time >= c.TIMEOUT):
                 print('TIMEOUT')
