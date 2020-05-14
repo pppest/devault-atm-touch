@@ -61,7 +61,7 @@ class AtmApp(App):
     client_address = StringProperty('No address! Scan your wallet QR!')
     client_qr = StringProperty('images/transparent.png')
     popup_text = StringProperty()
-    value_of_biggest_coin = c.BIGGEST_COIN * c.price_with_fee
+    value_of_biggest_coin = c.BIGGEST_COIN * c.PRICE_WITH_FEE
 
     def is_dvt_address(self, address, *args):
         return 'devault:' in address
