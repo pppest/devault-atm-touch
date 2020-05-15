@@ -98,12 +98,13 @@ class AtmApp(App):
             if (self.rl_time - self.start_time >= (c.TIMEOUT/2)) : ##self.atm_balance <= 2 * self.value_of_biggest_coin:
                 popup = Popup(title='', size =  (100 , 100), \
                                 size_hint =(None , None),
-                                separator_height = 0, background = 'images/transparent.png')
-                popup.open(content = Button(text='WARNING! \n ATM BALANCE LOW \n NO RETURNS', \
-                font_size = 33, \
-                font_name = 'font/Montserrat-Light.otf', \
-                pos_hint = {'x': 0.84, 'y': 0.94},color = (0,1,0,1)), on_press = root.dismiss())
-                popup.content()
+                                separator_height = 0, background = 'images/transparent.png', \
+                                content = Button(text='WARNING! \n ATM BALANCE LOW \n NO RETURNS', \
+                                font_size = 33, \
+                                font_name = 'font/Montserrat-Light.otf', \
+                                pos_hint = {'x': 0.84, 'y': 0.94},color = (0,1,0,1)))
+                popup.open()
+    
                 time.sleep(5)
                 popup.dismiss()
 
