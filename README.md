@@ -4,6 +4,10 @@
 kivy framework based touchscreen DeVault crypto ATM for the raspberry pi with a
 coin acceptor.
 
+**KNOWN PROBLEMS: it cannot give back coins and it doesnt check it coins inserted exceed atm balance**
+
+
+
 This is the first version of the kivy based DVT ATM, but I have plans to extend its functionality and to make different versions.
 Here is an image of the DeVault piñata ATM that I am currently working on:  
 
