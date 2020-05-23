@@ -9,8 +9,12 @@ coin acceptor.
 
 
 This is the first version of the kivy based DVT ATM, but I have plans to extend its functionality and to make different versions.
-Here is an image of the DeVault piñata ATM that I am currently working on:  
 
+I made this little video check it out:
+![A DeVault ATM youtube](https://github.com/pppest/devault-atm-touch/blob/master/images/atm-vid-fast.gif)   
+![A DeVault ATM fast gif no sound](https://www.youtube.com/watch?v=8jyNdE-9dDU&feature=youtu.be)   
+
+Some pics:
 ![DeVault ATM](https://github.com/pppest/devault-atm-touch/blob/master/images/devault-atm-touch-pinnata.jpg)   
 ![transactiongif](https://github.com/pppest/devault-atm-touch/blob/master/images/atm.gif)   
 ![transactiongif](https://github.com/pppest/devault-atm-touch/blob/master/images/transaction.gif)   
