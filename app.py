@@ -1,4 +1,3 @@
-
 from kivy.app import App
 from kivy.clock import Clock
 from kivy.lang import Builder
@@ -19,10 +18,6 @@ import gpio
 import qr
 import coinslot
 import delight
-
-
-### check if DeLight exists and downloads if not
-print(os.popen('sh ./has_delight.sh').read())
 
 ## Start daemon, get ATM balance, DVT price and initiate raspi gpio
 delight.start_daemon()
