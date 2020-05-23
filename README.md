@@ -12,14 +12,13 @@ This is the first version of the kivy based DVT ATM, but I have plans to extend 
 I made this little video check it out:    
 ![A DeVault ATM youtube](https://github.com/pppest/devault-atm-touch/blob/master/images/atm-vid-fast.gif)   
 
-   You can see it on youtube with sound:   
-[A DeVault ATM fast gif no sound](https://www.youtube.com/watch?v=8jyNdE-9dDU&feature=youtu.be)   
+You can see it on youtube with sound:   
 https://www.youtube.com/watch?v=8jyNdE-9dDU&feature=youtu.be
 
-Some pics:
+A pic:   
 ![DeVault ATM](https://github.com/pppest/devault-atm-touch/blob/master/images/devault-atm-touch-pinnata.jpg)   
-![transactiongif](https://github.com/pppest/devault-atm-touch/blob/master/images/atm.gif)   
-![transactiongif](https://github.com/pppest/devault-atm-touch/blob/master/images/transaction.gif)   
+<!-- ![transactiongif](https://github.com/pppest/devault-atm-touch/blob/master/images/atm.gif)   
+![transactiongif](https://github.com/pppest/devault-atm-touch/blob/master/images/transaction.gif)    -->
 
 Big shout-out to @21isenough , the Python and Kivy community for sharing so much great information!!!  
 And to the DeVault devs @jonspock and @proteanx for helping me learn.  
