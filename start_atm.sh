@@ -12,3 +12,6 @@ else
  mv ./DeLight-$VERSION DeLight
  rm DeLight-4.0.12.tar.gz
 fi
+
+
+python3 app.py
