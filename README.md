@@ -22,10 +22,12 @@ And to the DeVault devs @jonspock and @proteanx for helping me learn.
 If you have any questions then come find me in the DeVault [discord](https://discordapp.com/invite/JnRZ7BB) or [forum](https://devaultchat.cc/) or on [twitter](https://twitter.com/pestdesmadre).
 
 **How to use**  
+To use my code just clone/download it, install the requirements and run start_atm.sh. (maybe chmod +x it)   
+The app checks for the DeLight client and downloads if not found then starts the atm.
+
+
 Take a look at [@21isenough](https://github.com/21isenough/LightningATM)s or [@talenpierre](https://github.com/talentpierre/KivyLightningATM_Repo/tree/master/LightningATM_Kivy_Separate)s github if you need to learn how to build the actual thing. They have great documentation.
 
-To use my code just clone/download it, install the requirements and run the app.   
-The app checks for the DeLight client and downloads if not found.
 
 Note:  
 I left the usb.py in case someone want to use it with a converter instead of gpios  
