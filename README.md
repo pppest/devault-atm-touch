@@ -12,7 +12,7 @@ This is the first version of the kivy based DVT ATM, but I have plans to extend 
 I made this little video check it out:    
 ![A DeVault ATM youtube](https://github.com/pppest/devault-atm-touch/blob/master/images/atm-vid-fast.gif)   
 
-You can see it on youtube with sound:   
+You can see it on youtube with its original soundtrack by Tropigotikas:   
 https://www.youtube.com/watch?v=8jyNdE-9dDU&feature=youtu.be
 
 A pic:   
